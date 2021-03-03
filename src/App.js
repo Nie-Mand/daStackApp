@@ -17,7 +17,7 @@ function App() {
       setLoading(true)
       setButton('Fetching')
       console.log(process.env)
-      await axios.get(`${process.env.API}/${input}`)
+      await axios.get(`https://dastack.herokuapp.com/stack/${input}`)
         .then(({ data }) => {
           if (!data) setError(true)
           setTechs(data)
