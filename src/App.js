@@ -16,7 +16,7 @@ function App() {
       setError(false)
       setLoading(true)
       setButton('Fetching')
-      console.log(process.env.API, process.env.REACT_APP_API, process.env.REACT_API)
+      console.log(process.env)
       await axios.get(`${process.env.API}/${input}`)
         .then(({ data }) => {
           if (!data) setError(true)
