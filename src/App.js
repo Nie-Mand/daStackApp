@@ -32,7 +32,7 @@ function App() {
   return (
     <div>
       
-      <div className="card mx-auto my-3 p-3" style={{width: "50%"}}>
+      <div className="card mx-auto my-3 p-3" style={{width: "90%"}}>
         <h1 className="text-center" >daStack</h1> 
         {error && (
           <div className="alert alert-danger" >
