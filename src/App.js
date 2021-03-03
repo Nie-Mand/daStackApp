@@ -16,15 +16,16 @@ function App() {
       setError(false)
       setLoading(true)
       setButton('Fetching')
-      await axios.get(`https://dastack.herokuapp.com/stack/${input}`, {timeout: 5000})
+      await axios.get(`${process.env.API}/${input}`)
         .then(({ data }) => {
           if (!data) setError(true)
           setTechs(data)
         })
+        .catch(() => setError(true))
         
       setInput('')
       setButton('Get the Stack')
-            
+      setLoading(false)
     }
 }
   
